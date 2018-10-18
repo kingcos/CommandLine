@@ -19,7 +19,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "CommandLineKit",
+  name: "CommandLine",
   dependencies: [],
   targets: [
     .target(
