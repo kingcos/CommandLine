@@ -1,3 +1,4 @@
+// swift-tools-version:4.2
 /*
  * Package.swift
  * Copyright (c) 2015 Ben Gollmer.
@@ -19,5 +20,14 @@ import PackageDescription
 
 let package = Package(
   name: "CommandLine",
-  exclude: ["script"]
+  dependencies: [],
+  targets: [
+    .target(
+        name: "CommandLineKit",
+        dependencies: [],
+        path: "CommandLineKit/"),
+    .testTarget(
+        name: "CommandLineKitTests",
+        dependencies: ["CommandLineKit"])
+    ]
 )
