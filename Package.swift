@@ -19,13 +19,15 @@
 import PackageDescription
 
 let package = Package(
-  name: "CommandLine",
-  dependencies: [],
+  name: "CommandLineKit",
+  products: [
+    .library(name: "CommandLine", targets: ["CommandLineKit"]),
+    ],
   targets: [
     .target(
         name: "CommandLineKit",
         dependencies: [],
-        path: "CommandLineKit/"),
+        path: "CommandLineKit"),
     .testTarget(
         name: "CommandLineKitTests",
         dependencies: ["CommandLineKit"])
